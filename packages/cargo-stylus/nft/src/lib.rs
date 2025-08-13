@@ -63,7 +63,7 @@ pub enum StylusNFTError {
 #[inherit(Erc721<StylusNFTParams>)]
 impl StylusNFT {
     /// Mints an NFT, but does not call onErc712Received
-    pub fn mint(&mut self) -> Result<(), Vec<u8>> {
+    pub fn mint_by_yash01(&mut self) -> Result<(), Vec<u8>> {
         let minter = msg::sender();
         self.erc721.mint(minter)?;
         Ok(())
